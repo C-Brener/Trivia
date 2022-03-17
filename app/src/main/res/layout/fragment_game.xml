@@ -51,8 +51,8 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_chainStyle="packed"
                 app:srcCompat="@drawable/android_category_simple"
-                tools:ignore="ImageContrastCheck"
-                android:contentDescription="TODO" />
+                tools:ignore="ContentDescription,ImageContrastCheck"
+                android:contentDescription="@string/question_image" />
 
             <TextView
                 android:id="@+id/questionText"

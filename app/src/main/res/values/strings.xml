@@ -36,4 +36,5 @@
     <string name="sharing_not_available">Sharing Not Available</string>
     <string name="play_game">Play</string>
     <string name="logo_app">LogoApp</string>
+    <string name="question_image">Question Image</string>
 </resources>
