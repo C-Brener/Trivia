@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/titleFragment2"
         android:name="com.example.android.navigation.TitleFragment"
-        android:label="fragment_title"
-        tools:layout="@layout/fragment_title" >
+        android:label="@string/android_trivia"
+        tools:layout="@layout/fragment_title">
         <action
             android:id="@+id/action_titleFragment2_to_gameFragment"
             app:destination="@id/gameFragment" />
@@ -37,6 +37,12 @@
             app:destination="@id/gameFragment"
             app:popUpTo="@id/titleFragment2"
             app:popUpToInclusive="true" />
+        <argument
+            android:name="numQuestions"
+            app:argType="integer" />
+        <argument
+            android:name="NumCorrect"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/gameWonFragment"
@@ -48,5 +54,16 @@
             app:destination="@id/gameFragment"
             app:popUpTo="@id/titleFragment2"
             app:popUpToInclusive="true" />
+        <argument
+            android:name="numQuestions"
+            app:argType="integer" />
+        <argument
+            android:name="numCorrect"
+            app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.android.navigation.AboutFragment"
+        android:label="@string/about"
+        tools:layout="@layout/fragment_about" />
 </navigation>

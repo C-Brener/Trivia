@@ -37,4 +37,8 @@
     <string name="play_game">Play</string>
     <string name="logo_app">LogoApp</string>
     <string name="question_image">Question Image</string>
+    <string name="about_image">About Image</string>
+    <string name="next_match">Next Match</string>
+    <string name="winner">Win Image</string>
+    <string name="show_placar">Show Placar</string>
 </resources>
