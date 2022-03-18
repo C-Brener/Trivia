@@ -16,6 +16,7 @@
 
 package com.example.android.navigation
 
+import android.opengl.Visibility
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -36,13 +37,22 @@ class GameOverFragment : Fragment() {
         val binding: FragmentGameOverBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_game_over, container, false
         )
-        binding.tryAgainButton.setOnClickListener { view:View->
+        binding.tryAgainButton.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_gameOverFragment2_to_gameFragment)
         }
         val args = GameOverFragmentArgs.fromBundle(requireArguments())
-        Toast.makeText(context,
-            "NumCorrect: ${args.numCorrect}, NumQuestions: ${args.numQuestions}",
-            Toast.LENGTH_SHORT).show()
+
+        binding.show.setOnClickListener {
+            val points = "NumCorrect: ${args.numCorrect},\n NumQuestions: ${args.numQuestions}"
+            with(binding) {
+
+                show.visibility = View.GONE
+                placar.visibility = View.VISIBLE
+                placar.text = points
+            }
+
+        }
+
         return binding.root
 
     }

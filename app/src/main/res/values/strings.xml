@@ -41,4 +41,5 @@
     <string name="next_match">Next Match</string>
     <string name="winner">Win Image</string>
     <string name="show_placar">Show Placar</string>
+    <string name="try_again_">Try Again</string>
 </resources>

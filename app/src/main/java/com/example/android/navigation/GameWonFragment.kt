@@ -39,9 +39,10 @@ class GameWonFragment : Fragment() {
         val args = GameWonFragmentArgs.fromBundle(requireArguments())
 
         binding.show.setOnClickListener {
+            val placar = "Questions Correct: ${args.numCorrect},\n NumQuestions: ${args.numQuestions}"
             binding.show.visibility = View.GONE
             binding.placar.visibility = View.VISIBLE
-            binding.placar.text = args.numCorrect.toString()
+            binding.placar.text = placar
         }
         return binding.root
     }
